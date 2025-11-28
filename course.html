@@ -5,177 +5,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OFM Course Modules</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .video-cta {
-            background-color: #f9fafb;
-            border-left: 4px solid #1f2937;
-            padding: 1rem 1.5rem;
-            margin-top: 1.5rem;
-            border-radius: 0 0.5rem 0.5rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .video-cta-text {
-            font-size: 1rem;
-            color: #374151;
-            margin: 0;
-            font-weight: 500;
-        }
-        .video-cta-button {
-            background-color: #1f2937;
-            color: #fff;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        .video-cta-button:hover {
-            background-color: #111827;
-            transform: translateY(-2px);
-        }
-        @media (max-width: 768px) {
-            .video-cta {
-                flex-direction: column;
-                text-align: center;
-            }
+        body { font-family: 'Inter', sans-serif; }
+        wistia-player[media-id]:not(:defined) {
+            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/3n0v00wday/swatch');
+            display: block;
+            filter: blur(5px);
+            aspect-ratio: 16/9;
+            width: 100%;
         }
     </style>
+    <script src="https://fast.wistia.com/player.js" async></script>
 </head>
-<body class="bg-gray-50">
-    <div class="min-h-screen py-12 px-4">
-        <div class="max-w-5xl mx-auto">
+<body class="bg-black min-h-screen">
+
+    <!-- Sticky Header - Desktop Only -->
+    <header class="hidden md:block fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <img src="logo.png" alt="Logo" class="h-16">
+            <!-- CTA Button -->
+            <a href="YOUR_CALENDAR_LINK" class="bg-white text-black px-6 py-2.5 font-semibold text-sm hover:bg-white/90 transition-all" target="_blank">
+                Book a Call
+            </a>
+        </div>
+    </header>
+
+    <!-- Sticky Bottom Bar - Mobile Only -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-t border-white/10 px-4 py-4">
+        <a href="YOUR_CALENDAR_LINK" class="block w-full bg-white text-black text-center py-3.5 font-semibold text-sm" target="_blank">
+            Book a Call
+        </a>
+    </div>
+
+    <div class="min-h-screen py-12 md:pt-32 md:pb-16 px-4 pb-24">
+        <div class="max-w-4xl mx-auto">
             <!-- Header -->
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            <div class="text-center mb-12 md:mb-16">
+                <p class="text-white/50 text-xs md:text-sm tracking-[0.3em] uppercase mb-4 md:mb-6">Course Content</p>
+                <h1 class="text-3xl md:text-6xl font-bold text-white mb-4 md:mb-6 tracking-tight">
                     OFM Course Modules
                 </h1>
-                <p class="text-lg text-gray-600">
+                <div class="w-12 md:w-16 h-[2px] bg-white mx-auto mb-4 md:mb-6"></div>
+                <p class="text-base md:text-lg text-white/60 px-4">
                     Complete all 4 modules to master the fundamentals
                 </p>
             </div>
 
             <!-- Course Content -->
-            <div class="space-y-12">
+            <div class="space-y-6 md:space-y-8">
 
                 <!-- Module 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6 md:p-8">
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            Module 1: Introduction to OFM
-                        </h2>
-                        <div class="aspect-video bg-gray-900 rounded-lg mb-6">
-                            <!-- Replace src with your video URL -->
-                            <iframe
-                                src="about:blank"
-                                class="w-full h-full rounded-lg"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
+                <div class="bg-white/5 border border-white/10">
+                    <div class="p-5 md:p-10">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center flex-shrink-0">
+                                <span class="text-black font-bold text-xs md:text-sm">01</span>
+                            </div>
+                            <h2 class="text-lg md:text-2xl font-semibold text-white">
+                                Introduction to OFM
+                            </h2>
                         </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            In this module, you'll learn the foundational concepts of OFM. We'll cover the basics and set you up for success in the following modules. This introduction will give you a clear understanding of what to expect and how to get the most out of this course.
+                        <div class="mb-4 md:mb-6">
+                            <script src="https://fast.wistia.com/embed/3n0v00wday.js" async type="module"></script>
+                            <wistia-player media-id="3n0v00wday" aspect="1.7777777777777777"></wistia-player>
+                        </div>
+                        <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                            Learn what OFM is, why models need managers, and why this business is growing rapidly. Discover the mindset you need to succeed and why OFM requires zero startup capital — just information. This is the foundation for everything that follows.
                         </p>
-                        <!-- CTA -->
-                        <div class="video-cta">
-                            <p class="video-cta-text">Want to work together 1-on-1? Let's chat.</p>
-                            <a href="YOUR_CALENDAR_LINK" class="video-cta-button" target="_blank">Book a Call</a>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Module 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6 md:p-8">
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            Module 2: Core Principles
-                        </h2>
-                        <div class="aspect-video bg-gray-900 rounded-lg mb-6">
-                            <!-- Replace src with your video URL -->
-                            <iframe
-                                src="about:blank"
-                                class="w-full h-full rounded-lg"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
+                <div class="bg-white/5 border border-white/10">
+                    <div class="p-5 md:p-10">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center flex-shrink-0">
+                                <span class="text-black font-bold text-xs md:text-sm">02</span>
+                            </div>
+                            <h2 class="text-lg md:text-2xl font-semibold text-white">
+                                How to Sign Your First Client
+                            </h2>
                         </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            Dive deeper into the core principles that make OFM effective. You'll learn key strategies and techniques that will help you implement what you've learned in real-world scenarios. This module builds directly on the foundation from Module 1.
+                        <div class="mb-4 md:mb-6">
+                            <script src="https://fast.wistia.com/embed/zgvb5ukhrb.js" async type="module"></script>
+                            <wistia-player media-id="zgvb5ukhrb" aspect="1.7777777777777777"></wistia-player>
+                        </div>
+                        <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                            Build the perfect Instagram profile to get replies, identify managed vs unmanaged models, and use the "rabbit hole method" to find unlimited leads. Learn exactly what to message, how to handle replies, and the 1:10 chatting ratio that closes deals.
                         </p>
-                        <!-- CTA -->
-                        <div class="video-cta">
-                            <p class="video-cta-text">Questions? Let's talk through it.</p>
-                            <a href="YOUR_CALENDAR_LINK" class="video-cta-button" target="_blank">Book a Call</a>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Module 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6 md:p-8">
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            Module 3: Advanced Strategies
-                        </h2>
-                        <div class="aspect-video bg-gray-900 rounded-lg mb-6">
-                            <!-- Replace src with your video URL -->
-                            <iframe
-                                src="about:blank"
-                                class="w-full h-full rounded-lg"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
+                <div class="bg-white/5 border border-white/10">
+                    <div class="p-5 md:p-10">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center flex-shrink-0">
+                                <span class="text-black font-bold text-xs md:text-sm">03</span>
+                            </div>
+                            <h2 class="text-lg md:text-2xl font-semibold text-white">
+                                How to Onboard the Client
+                            </h2>
                         </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            Take your skills to the next level with advanced strategies and proven methods. This module covers more complex concepts and shows you how to optimize your approach for maximum results. You'll learn tips and tricks used by experts in the field.
+                        <div class="mb-4 md:mb-6">
+                            <script src="https://fast.wistia.com/embed/ur7g9wp9v9.js" async type="module"></script>
+                            <wistia-player media-id="ur7g9wp9v9" aspect="1.7777777777777777"></wistia-player>
+                        </div>
+                        <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                            Set up the account correctly — profile, pricing, promotions, and the $5 PPV welcome message that filters buyers. Learn tracking links, subscriber lists (fish to whales), mass message rules, and content storage systems. Do this in the first 24 hours.
                         </p>
-                        <!-- CTA -->
-                        <div class="video-cta">
-                            <p class="video-cta-text">Want help implementing this? Let's chat.</p>
-                            <a href="YOUR_CALENDAR_LINK" class="video-cta-button" target="_blank">Book a Call</a>
-                        </div>
                     </div>
                 </div>
 
                 <!-- Module 4 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <div class="p-6 md:p-8">
-                        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            Module 4: Implementation & Next Steps
-                        </h2>
-                        <div class="aspect-video bg-gray-900 rounded-lg mb-6">
-                            <!-- Replace src with your video URL -->
-                            <iframe
-                                src="about:blank"
-                                class="w-full h-full rounded-lg"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                            </iframe>
+                <div class="bg-white/5 border border-white/10">
+                    <div class="p-5 md:p-10">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+                            <div class="w-8 h-8 md:w-10 md:h-10 bg-white flex items-center justify-center flex-shrink-0">
+                                <span class="text-black font-bold text-xs md:text-sm">04</span>
+                            </div>
+                            <h2 class="text-lg md:text-2xl font-semibold text-white">
+                                How to Market a Client in OFM
+                            </h2>
                         </div>
-                        <p class="text-gray-600 leading-relaxed">
-                            In this final module, you'll learn how to put everything together and take action. We'll discuss implementation strategies, common pitfalls to avoid, and your next steps for continued growth. You'll leave with a clear action plan for moving forward.
+                        <div class="mb-4 md:mb-6">
+                            <script src="https://fast.wistia.com/embed/qe2oh50kcz.js" async type="module"></script>
+                            <wistia-player media-id="qe2oh50kcz" aspect="1.7777777777777777"></wistia-player>
+                        </div>
+                        <p class="text-white/60 leading-relaxed text-sm md:text-base">
+                            Instagram Reels is the GOAT — learn what makes a reel blow up vs flop. Use Reddit for instant traffic while building your IG. Master subreddit niches, copy what works, and follow the exact formula to hit $20k+/month.
                         </p>
-                        <!-- CTA -->
-                        <div class="video-cta">
-                            <p class="video-cta-text">Ready to get started? Let's talk.</p>
-                            <a href="YOUR_CALENDAR_LINK" class="video-cta-button" target="_blank">Book a Call</a>
-                        </div>
                     </div>
                 </div>
 
             </div>
 
             <!-- Footer -->
-            <div class="text-center mt-12">
-                <p class="text-gray-500">
+            <div class="text-center mt-12 md:mt-16">
+                <div class="w-8 h-[2px] bg-white/30 mx-auto mb-4 md:mb-6"></div>
+                <p class="text-white/40 text-sm md:text-base">
                     Questions? Reach out to our support team anytime.
                 </p>
             </div>
